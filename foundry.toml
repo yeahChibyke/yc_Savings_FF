@@ -3,4 +3,18 @@ src = "src"
 out = "out"
 libs = ["lib"]
 
+remappings = [
+    "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+    "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+    "forge-std/=lib/forge-std/src/",
+    "halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/",
+]
+
+[lint]
+exclude_lints = [
+    "screaming-snake-case-immutable",
+    "unused-import",
+    "mixed-case-function",
+]
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

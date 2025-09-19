@@ -78,6 +78,7 @@ contract TimeLockSavings {
         } else {
             // Normal withdrawal with rewards
             uint256 reward = calculateReward(timeElapsed, amount);
+            // uint256 reward = calculateReward(amount, timeElapsed); // --> mitigation
             uint256 totalAmount = amount + reward;
 
             userDeposit.withdrawn = true;
